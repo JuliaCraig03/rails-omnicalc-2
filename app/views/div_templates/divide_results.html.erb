@@ -8,7 +8,14 @@
   <dd><%= @second_number %></dd>
 
   <dt>Result</dt>
-  <dd><%= @result %></dd>
+  <dd>
+   <% if @second_number == 0 %>
+    Division by zero is not allowed.
+  <% else %>
+  <%= @div = @first_number / @second_number %>
+  <%= @div %>
+  <% end %>
+  </dd>
 </dl>
 
 <a href="/divide">Do another division</a>
